@@ -4,7 +4,9 @@
  require 'xesql.php';
  $ketnoi = new Xe('localhost', 'root', '', 'quanlioto');
  //Doi tinh trang xe
- $_GET['id'] = $_GET['amp;id'];
+ if ($_GET['amp;id']) {
+     $_GET['id'] = $_GET['amp;id'];
+ }
 if (isset($_GET['id']) && isset($_GET['tinhtrang'])) {
     echo "ádsa";
     $id = $_GET['id'];
